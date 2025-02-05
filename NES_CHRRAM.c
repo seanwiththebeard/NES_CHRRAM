@@ -127,10 +127,10 @@ void main(void)
   MMC3_CHR_0000(2); 	//PPU $0000-$07FF (or $1000-$17FF): 2 KB switchable CHR bank
   MMC3_CHR_0800(3); 	//PPU $0800-$0FFF (or $1800-$1FFF): 2 KB switchable CHR bank
   //Sprites
-  MMC3_CHR_1000(0); 	//PPU $1000-$13FF (or $0000-$03FF): 1 KB switchable CHR bank
-  MMC3_CHR_1400(1); 	//PPU $1400-$17FF (or $0400-$07FF): 1 KB switchable CHR bank
-  MMC3_CHR_1800(2); 	//PPU $1800-$1BFF (or $0800-$0BFF): 1 KB switchable CHR bank
-  MMC3_CHR_1C00(3);	//PPU $1C00-$1FFF (or $0C00-$0FFF): 1 KB switchable CHR bank  
+  //MMC3_CHR_1000(0); 	//PPU $1000-$13FF (or $0000-$03FF): 1 KB switchable CHR bank
+  //MMC3_CHR_1400(1); 	//PPU $1400-$17FF (or $0400-$07FF): 1 KB switchable CHR bank
+  //MMC3_CHR_1800(2); 	//PPU $1800-$1BFF (or $0800-$0BFF): 1 KB switchable CHR bank
+  //MMC3_CHR_1C00(3);	//PPU $1C00-$1FFF (or $0C00-$0FFF): 1 KB switchable CHR bank  
   
   setup_graphics();
   // draw message  
