@@ -65,7 +65,7 @@ void drawChars()
   {
     for (x = 0; x < 16; ++x)
     {
-      vram_adr(NTADR_A(x,y));
+      vram_adr(NTADR_A(x + 2,y + 2));
       vram_put(z);
       ++z;
     }
