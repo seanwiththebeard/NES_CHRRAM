@@ -110,6 +110,7 @@ void setup_graphics() {
   drawChars();
 }
 
+byte x;
 void main(void)
 {
   #include <_heap.h>
@@ -122,12 +123,15 @@ void main(void)
   memset((int*)heaporg[0], 0, heapend[0] - heaporg[0]); 
   
   MMC3_WRAM_ENABLE();
+  
   //Program Banks
   MMC3_PRG_8000(0); //CPU $8000-$9FFF (or $C000-$DFFF): 8 KB switchable PRG ROM bank
   MMC3_PRG_A000(0); //CPU $A000-$BFFF: 8 KB switchable PRG ROM bank
+  
   //Backgrounds
   MMC3_CHR_0000(0); 	//PPU $0000-$07FF (or $1000-$17FF): 2 KB switchable CHR bank
   MMC3_CHR_0800(2); 	//PPU $0800-$0FFF (or $1800-$1FFF): 2 KB switchable CHR bank
+  
   //Sprites
   MMC3_CHR_1000(4); 	//PPU $1000-$13FF (or $0000-$03FF): 1 KB switchable CHR bank
   MMC3_CHR_1400(5); 	//PPU $1400-$17FF (or $0400-$07FF): 1 KB switchable CHR bank
@@ -139,5 +143,8 @@ void main(void)
   setup_graphics();
   ppu_on_all();
   while(1) {
+    //MMC3_CHR_0000(x); 	//PPU $0000-$07FF (or $1000-$17FF): 2 KB switchable CHR bank
+
+    ++x;
   }
 }
