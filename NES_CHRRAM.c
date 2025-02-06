@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <string.h>
+//#resource "NESLIB_CRT0_Template (2).zip"
 
 // include NESLIB header
 #include "neslib.h"
