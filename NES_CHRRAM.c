@@ -51,7 +51,7 @@
 // bank-switching configuration
 #define NES_MAPPER 4		// Mapper 4 (MMC3)
 #define NES_PRG_BANKS 32	// # of 16KB PRG banks
-#define NES_CHR_BANKS 0	// # of 8KB CHR banks
+#define NES_CHR_BANKS 32	// # of 8KB CHR banks
 
 //#resource "nesbanked.cfg"
 #define CFGFILE nesbanked.cfg
@@ -143,7 +143,7 @@ void main(void)
   setup_graphics();
   ppu_on_all();
   while(1) {
-    //MMC3_CHR_0000(x); 	//PPU $0000-$07FF (or $1000-$17FF): 2 KB switchable CHR bank
+    MMC3_CHR_0000(x); 	//PPU $0000-$07FF (or $1000-$17FF): 2 KB switchable CHR bank
 
     ++x;
   }
