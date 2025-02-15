@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <string.h>
 //#resource "Neslib_CRT0_Template (2).zip"
+//#resource "MMC3 CRT0.7z"
+
 
 // include NESLIB header
 #include "neslib.h"
